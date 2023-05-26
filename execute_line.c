@@ -1,6 +1,6 @@
 #include "simple_shell.h"
 /**
-*_execute -  executes in the main shell
+*execute_line - executes in the main shell
 *@argv: argument char-pointers array
 *@commands: split arguments
 *@counter: count of commands that were run
@@ -16,6 +16,7 @@ void execute_line(char **argv, char **commands, int counter,
 	char *full = NULL;
 	(void)line;
 	pid = fork();
+
 	if (pid < 0)
 		perror("Error:");
 	if (pid == 0)
