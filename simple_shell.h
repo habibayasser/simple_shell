@@ -27,7 +27,7 @@ typedef struct list_struct
 void execute_line(char **argv, char **commands, int counter,
 		  char **env, int *exit_st, char *line);
 char **split_line(char *line);
-list_p *list_path(char **env);
+list_s *list_path(char **env);
 int _setenv(const char *name, const char *value, int overwrite);
 char *_which(char **commands, char **env);
 void built_in_exit(char *line, char **arg, int *exit_st, int counter);
@@ -39,11 +39,11 @@ void print_num(int counter);
 
 /*useful functions*/
 int _strlen(char *s);
-void add_node_end(list_p **head, const char *str);
+void add_node_end(list_s **head, const char *str);
 char *_strcat(char *s1, char *s2);
 char *_strdup(char *str);
 int _strcmp(char *s1, char *s2);
 void free_loop(char **arr);
-void free_list(list_p *head);
+void free_list(list_s *head);
 char *_strncpy(char *dest, char *src, int n);
 #endif /* SHELL_H*/

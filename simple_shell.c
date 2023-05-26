@@ -39,9 +39,9 @@ int main(int argc, char **argv, char **env)
 			continue;
 		shell_commands = split_line(lines);
 		if (_strcmp("exit", *shell_commands) == 0)
-			built_exit(lines, shell_commands, &exit_st, counter);
+			built_in_exit(lines, shell_commands, &exit_st, counter);
 		else if (_strcmp("env", *shell_commands) == 0)
-			built_env(shell_commands, env, &exit_st);
+			built_in_env(shell_commands, env, &exit_st);
 		else
 			execute_line(argv, shell_commands, counter, env, &exit_st, lines);
 		fflush(stdin);
