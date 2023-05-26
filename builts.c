@@ -50,14 +50,14 @@ int _atoi(char *comper)
 */
 void built_in_exit(char *line, char **commands, int *exit_st, int counter)
 {
-	int num = 0;
+	int number = 0;
 
 	if (commands[1])
 	{
 		if (is_positive(commands[1]) == 0)
 		{
-			num = _atoi(commands[1]);
-			*exit_st = num;
+			number = _atoi(commands[1]);
+			*exit_st = number;
 		}
 		else
 		{
